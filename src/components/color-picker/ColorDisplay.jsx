@@ -5,7 +5,9 @@ const ColorDisplay = ({ backgroundColor }) => {
   return (
     <div
       style={{
-        backgroundColor
+        backgroundColor,
+        width: '100px',
+        height: '100px'
       }}
     >
     </div>

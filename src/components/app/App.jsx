@@ -1,5 +1,6 @@
 import React from 'react';
+import ColorPicker from '../../containers/ColorPicker';
 
 export default function App() {
-  return <h1>Changing colors, every second, of every day</h1>;
+  return <ColorPicker />;
 }
