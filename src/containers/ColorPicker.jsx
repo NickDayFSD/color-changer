@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ColorControls from '../components/color-picker/ColorDisplay';
+import ColorControls from '../components/color-picker/ColorControls';
 import ColorDisplay from '../components/color-picker/ColorDisplay';
 
 export default class ColorPicker extends Component {
   state = {
-    selectedColor: 'white'
+    selectedColor: 'black'
   };
 
   handleColorChange = (color) => {
