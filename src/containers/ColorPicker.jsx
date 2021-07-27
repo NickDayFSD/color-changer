@@ -12,7 +12,7 @@ export default class ColorPicker extends Component {
   }
 
   render() {
-    const colors = ['burgundy', 'maroon', 'brown', 'slate gray', 'yellow'];
+    const colors = ['black', 'maroon', 'brown', 'gray', 'yellow'];
     const { selectedColor } = this.state;
 
     return (
