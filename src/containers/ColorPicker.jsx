@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
-import ColorControls from '../components/color-picker/ColorControls';
 import ColorDisplay from '../components/color-picker/ColorDisplay';
+import { colorSelect } from '../utils/utils';
 
 export default class ColorPicker extends Component {
   state = {
-    selectedColor: 'black'
+    theColor: 'white',
+    colors: ['black', 'maroon', 'brown', 'gray', 'yellow']
   };
 
-  handleColorChange = (color) => {
-    this.setState({ selectedColor: color });
+  componentDidMount() {
+    const { colors } = this.state;
+    setInterval(() => {
+      this.setState({ theColor: colors[colorSelect(colors)] });
+    },
+    1000
+    );
   }
 
   render() {
-    const colors = ['black', 'maroon', 'brown', 'gray', 'yellow'];
-    const { selectedColor } = this.state;
-
+    const { theColor } = this.state;
+  
     return (
       <>
-        <ColorControls colors={colors} onColorChange={this.handleColorChange} />
-        <ColorDisplay backgroundColor={selectedColor} />
+        <ColorDisplay backgroundColor={theColor} />
       </>
     );
   }
